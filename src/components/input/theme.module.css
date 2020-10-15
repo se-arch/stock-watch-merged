@@ -1,0 +1,19 @@
+/* theme.css */
+
+.container {}
+.input {
+    width: 100%;
+}
+.suggestionsContainer {
+    position: absolute;
+    background-color: #F3F5F6;
+}
+.suggestionsContainer > ul {
+    list-style-type: none;
+}
+
+.suggestion {
+    flex-direction: column;
+}
+.suggestion {}
+.suggestionHighlighted {}

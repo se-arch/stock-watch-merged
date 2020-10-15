@@ -1,0 +1,137 @@
+body {
+    background-color: white;
+}
+
+body > #root, .background {
+  height: 100vh;
+  background-color: white;
+}
+
+.App {}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+    height: 325px;
+}
+
+.header > span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 754px;
+    background-color: white;
+}
+
+.content {
+    margin-left: 20%;
+    margin-right: 20%;
+
+    overflow: none;
+    position:relative;
+    top: 300px;
+}
+
+.content > .center {
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.title {
+    display: flex;
+    font-size: 70px;
+    font-family: "Monem";
+    color: #73d7e6;
+    padding-bottom: 50px;
+    padding-top: 30px;
+
+    width: 100%;
+    margin-bottom: 31px;
+}
+
+.datepicker {
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.calendartInput {
+    display: inline;
+    margin-left: 50px;
+}
+
+.title > span {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.interaction {
+    display: flex;
+    justify-content: space-between;
+}
+.mergeButton {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+.MainInputContainer  {
+    width: 100%;
+}
+.MainInputContainer > div  {
+    display: flex;
+    width: 100%;
+}
+.MainInputContainer > div > div {
+    width: 100%;
+}
+.MainInputContainer > div > div.buttonContainer {
+    width: auto;
+}
+
+.buttonContainer {
+    display: flex;
+    width: auto;
+    align-items: flex-start;
+}
+
+.chartList {
+    display: flex;
+    flex-wrap: wrap;
+
+    flex-direction: row;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+
+    height: 100vh;
+    overflow-y: visible;
+
+    padding-top: 20px;
+}
+
+.chartContainer {
+    flex: 100%;
+}
+
+@keyframes onErrorAnimation {
+    25%  { background:red; }
+    50%{ background:red; }
+	100%{ background:white; }
+}
+
+@font-face {
+  font-family: 'Monem';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/monem/687a15ae70c11804bd2ada5ec7a535f8.eot'); /* IE9 Compat Modes */
+  src: local('Monem'), local('Monem'),
+       url('./assets/fonts/monem/687a15ae70c11804bd2ada5ec7a535f8.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./assets/fonts/monem/687a15ae70c11804bd2ada5ec7a535f8.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./assets/fonts/monem/687a15ae70c11804bd2ada5ec7a535f8.woff') format('woff'), /* Modern Browsers */
+       url('./assets/fonts/monem/687a15ae70c11804bd2ada5ec7a535f8.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./assets/fonts/monem/687a15ae70c11804bd2ada5ec7a535f8.svg#Monem') format('svg'); /* Legacy iOS */
+}
