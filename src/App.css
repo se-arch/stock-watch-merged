@@ -7,8 +7,6 @@ body > #root, .background {
   background-color: white;
 }
 
-.App {}
-
 .header {
     position: fixed;
     top: 0;
@@ -102,7 +100,7 @@ body > #root, .background {
 .chartList {
     display: flex;
     flex-wrap: wrap;
-
+ 
     flex-direction: row;
     align-items: flex-start;
     flex-direction: row-reverse;

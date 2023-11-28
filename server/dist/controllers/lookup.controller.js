@@ -22,6 +22,7 @@ class LookUpController {
         this.urlForLookUp = (input) => {
             const endpoint = "autoc";
             let params = {
+                apiKey: "1Vp3P7TNGpODDQB0fRlcV2vpwYh5xTOs",
                 query: encodeURIComponent(input),
                 limit: "10",
                 lang: "en"
@@ -29,7 +30,7 @@ class LookUpController {
             return this.apiUrl(endpoint, params);
         };
         this.apiUrl = (endpoint, params) => {
-            const apiHost = "http://d.yimg.com/autoc.finance.yahoo.com";
+            const apiHost = "https://financialmodelingprep.com/api/v3/search-ticker";
             let data = Object.entries(params);
             let items = data.map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`);
             let query = items.join('&');

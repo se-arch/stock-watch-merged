@@ -21,9 +21,10 @@ class LookUpController implements IControllerBase {
     };
 
     urlForLookUp = (input: string): string => {
-        const endpoint = "autoc";
+        const endpoint = "api/v3/search-ticker";
 
         let params = {
+            apikey: "1Vp3P7TNGpODDQB0fRlcV2vpwYh5xTOs",
             query: encodeURIComponent(input),
             limit: "10",
             lang: "en"
@@ -33,7 +34,7 @@ class LookUpController implements IControllerBase {
     };
 
     apiUrl = (endpoint: string, params: object): string => {
-        const apiHost = "http://d.yimg.com/autoc.finance.yahoo.com";
+        const apiHost = "http://financialmodelingprep.com/";
 
         let data = Object.entries(params);
         let items = data.map(([k, v]): string => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`);
@@ -51,8 +52,9 @@ class LookUpController implements IControllerBase {
         try {
             const response = await fetch(url);
             const data = await response.json();
+            console.log(data);
 
-            const parsed = data.ResultSet.Result.map(item => {
+            const parsed = data.map(item => {
                 return { symbol: item.symbol, name: item.name };
             });
 
