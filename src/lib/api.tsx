@@ -24,6 +24,7 @@ class StockAPI {
     search = async (query: string) => {
         try {
             const url: string = `${this.baseUrl}/lookup?value=${query}`;
+            console.log(url);
             const response = await fetch(url);
 
             if (!response.ok) {

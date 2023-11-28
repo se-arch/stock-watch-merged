@@ -41,7 +41,9 @@
         "react-themeable": "^1.1.0",
         "serve": "^11.3.2",
         "ts-debounce": "^2.0.1",
-        "typescript": "^3.7.5"
+        "ts-node": "^10.9.1",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^3.9.10"
     },
     "scripts": {
         "start-js": "react-scripts start",
@@ -50,7 +52,8 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "start-build": "serve -s build"
+        "start-build": "serve -s build",
+        "start-server-dev": "ts-node-dev server/src/server.ts"
     },
     "eslintConfig": {
         "extends": "react-app"

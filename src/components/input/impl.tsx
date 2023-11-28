@@ -9,7 +9,6 @@ import theme from "./theme.module.css";
 
 import { IconButton, TextField } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
-import CreateIcon from '@material-ui/icons/Create';
 
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -39,11 +38,13 @@ class MainInput extends React.Component<MainInputProps, MainInputState> {
 
     submit = (type: string) => {
         if (!this.state.input) {
-            return;
+            return type;
         }
 
         this.props.feedback(this.state.input, type === "add");
         this.setState({ input: "" });
+ 
+        return type;
     }
 
     onKeyPress = (e: any) => {
@@ -72,7 +73,7 @@ class MainInput extends React.Component<MainInputProps, MainInputState> {
     }
 
     onSuggestionSelected = async (_: FormEvent, params: SuggestionSelectedEventData<string>) => {
-        const { suggestion, method } = params;
+        const { suggestion } = params;
         const symbol: string = (suggestion as any).symbol;
 
         await this.setState({ input: symbol });

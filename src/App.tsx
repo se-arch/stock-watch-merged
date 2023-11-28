@@ -110,7 +110,7 @@ class App extends React.Component {
         delete chartData[symbol];
 
         let symbols: string[] = this.state.symbols;
-        symbols = symbols.filter(x => x != symbol);
+        symbols = symbols.filter(x => x !== symbol);
 
         this.setState({ chartData, symbols });
     }

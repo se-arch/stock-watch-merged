@@ -39,10 +39,12 @@ class ChartList extends React.Component<ChartListProps, ChartListState> {
         const chartsData: any[] = [];
         const data: any[] = [];
 
+        // FIXME! do not use map for not map stuff
         Object.entries(this.props.data).reverse().map(item => {
             const symbol = item[0];
 
             if (item[1].s === "no_data") {
+                // eslint-disable-next-line
                 return;
             }
 
@@ -56,6 +58,9 @@ class ChartList extends React.Component<ChartListProps, ChartListState> {
             } else {
                 data.push({ points, labels, symbol });
             }
+
+            // eslint-disable-next-line
+            return;
         });
 
         if(data.length && this.props.merged) {
